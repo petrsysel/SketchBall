@@ -1,0 +1,104 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Fonts/BRADHITC.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Prefabs/ScoreOverviewHolder.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/UIButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/buttonOff.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/buttonPlay.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/buttonVolume.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/buttonNewGame.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/lines.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/buttonPause.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/paper.jpg" type="Texture" id=10]
+[ext_resource path="res://Scripts/UI.cs" type="Script" id=11]
+
+[sub_resource type="DynamicFont" id=4]
+size = 41
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 90
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="UI" type="CanvasLayer"]
+offset = Vector2( 0, 650 )
+transform = Transform2D( 1, 0, 0, 1, 0, 650 )
+script = ExtResource( 11 )
+
+[node name="Paper" type="Sprite" parent="."]
+position = Vector2( 178, -308 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+region_enabled = true
+region_rect = Rect2( 0, 50, 800, 1500 )
+
+[node name="ScoreHolder" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 11.0
+margin_right = 298.0
+margin_bottom = 95.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "SCORE: 0"
+
+[node name="PausedLabel" type="Label" parent="."]
+margin_left = 7.0
+margin_top = -594.0
+margin_right = 358.0
+margin_bottom = -481.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "PAUSED"
+align = 1
+valign = 1
+
+[node name="Lines" type="Sprite" parent="."]
+position = Vector2( 210, 66 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+vframes = 7
+frame = 4
+
+[node name="OffButton" parent="." instance=ExtResource( 3 )]
+position = Vector2( 116, -299 )
+Image = ExtResource( 4 )
+
+[node name="VolumeButton" parent="." instance=ExtResource( 3 )]
+position = Vector2( 117, -414 )
+Image = ExtResource( 6 )
+
+[node name="NewGameButton" parent="." instance=ExtResource( 3 )]
+position = Vector2( 232, -298 )
+Image = ExtResource( 7 )
+
+[node name="PlayButton" parent="." instance=ExtResource( 3 )]
+position = Vector2( 233, -416 )
+Image = ExtResource( 5 )
+
+[node name="PauseButton" parent="." instance=ExtResource( 3 )]
+position = Vector2( 326, 33 )
+Image = ExtResource( 9 )
+
+[node name="ScoreOverviewHolder" parent="." instance=ExtResource( 2 )]
+margin_left = 42.0
+margin_top = -224.0
+margin_right = 320.0
+margin_bottom = -86.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 87.0
+margin_top = -53.0
+margin_right = 266.0
+margin_bottom = -14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Created by Petr Sysel"
+align = 1
+valign = 1

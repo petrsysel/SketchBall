@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/rotationObstacle.png" type="Texture" id=1]
+[ext_resource path="res://Shaders/ColorPickerMaterial.tres" type="Material" id=2]
+[ext_resource path="res://Scripts/RotationObstacle.cs" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 28.0
+
+[node name="RotationObstacle" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = ExtResource( 2 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+hframes = 3
+frame = 1

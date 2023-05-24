@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/paper.jpg" type="Texture" id=1]
+[ext_resource path="res://Scripts/Background.cs" type="Script" id=2]
+
+[node name="Background" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Paper1" type="Sprite" parent="."]
+position = Vector2( 181, 303 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1500, 3399 )
+
+[node name="Paper2" type="Sprite" parent="."]
+position = Vector2( 181, 303 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1500, 3399 )

@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Sprites/holes.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Hole.cs" type="Script" id=2]
+[ext_resource path="res://Scripts/Hitbox.cs" type="Script" id=3]
+[ext_resource path="res://Shaders/ColorPickerMaterial.tres" type="Material" id=4]
+
+[sub_resource type="ShaderMaterial" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 21.4761
+
+[node name="Hole" type="Node2D"]
+material = SubResource( 2 )
+script = ExtResource( 2 )
+
+[node name="Rotor" type="Area2D" parent="."]
+scale = Vector2( 0.35, 0.35 )
+script = ExtResource( 3 )
+
+[node name="Holes" type="Sprite" parent="Rotor"]
+material = ExtResource( 4 )
+position = Vector2( 55, 55 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rotor"]
+position = Vector2( 55, 55 )
+shape = SubResource( 1 )

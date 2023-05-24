@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/lines.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Line.cs" type="Script" id=2]
+
+[node name="Line" type="StaticBody2D"]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource( 2 )
+
+[node name="Lines" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -16 )
+vframes = 7
+region_enabled = true
+region_rect = Rect2( 0, 0, 1024, 224 )
