@@ -1,4 +1,4 @@
-# Název Vašeho Projektu
+# Sketch Ball
 
 ## Popis
 
@@ -47,7 +47,7 @@ Objekt Input obsahuje také například funkci GetAcceleromater(), která funguj
 <img src="./Screenshots/screenGodotPermissions.png" alt="Povolení funkcí">
 
 ### Debugování programu
-Pro debugování aplikací pro mobilní zařízení  obsahuje Godot nástroj, který automaticky rozpozná zařízení připojení k počítači, nainstaluje aplikaci a spustí ji.
+Pro debugování aplikací pro mobilní zařízení  obsahuje Godot nástroj, který automaticky rozpozná zařízení připojené k počítači, nainstaluje aplikaci a spustí ji.
 
 <img src="./Screenshots/screenGodotAndroid.png"><br>
 Také lze využít nástroj Remote Debuger pro debugování bezdrátově.
@@ -67,7 +67,7 @@ Pro generování bludiště je použit algoritmus [Randomized depth-first search
 ```
 
 ### Stavový automat řízení hry
-Hra je řízena stavovým audomatem hráče, který říká, v jakém stavu se hráč zrovna nachází. Každý stav má naimplementované vlastní chování v aktivním stavu. Ukázka zjednodušené implementace stavového automatu:
+Hra je řízena stavovým audomatem hráče, který říká, v jakém stavu se hráč zrovna nachází. Každý stav má naimplementované vlastní chování. Zjednodušená ukázka implementace stavového automatu:
 
 ```cs
 // Model stavu hráče
@@ -120,7 +120,7 @@ public class Player{
     }
 }
 ```
-Kompletní implementaci naleznete [zde](./Scripts/Player.cs)
+Kompletní implementaci naleznete [zde](./Scripts/Player.cs).
 
 ### Ukládání hry
 Ukládání hry má Godot opět řešen velice jednoduše:
@@ -172,6 +172,7 @@ public class SaveManager{
     }
 }
 ```
+Cesta user:// je umístěna ve složce, kde je hra nainstalována, nezávisle na operačním systému.
 
 ### Nedostatky
 
