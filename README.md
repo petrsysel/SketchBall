@@ -9,7 +9,7 @@ Cílem hry je získání co největšího score tím, že se hráč snaží, pom
 
 <div style="display:flex; flex-wrap:wrap">
 
-<img src="./Screenshots/screenLoading.jpg" alt="Screenshot" width="200">
+<img src="./Screenshots/screenLoading2.jpg" alt="Screenshot" width="200">
 
 <img src="./Screenshots/screenMenu.jpg" alt="Screenshot" width="200">
 
@@ -23,7 +23,9 @@ Cílem hry je získání co největšího score tím, že se hráč snaží, pom
 </div>
 
 ## Ke stažení
-APK soubor hry si můžete stáhnout [zde](./Export/SketchBall.apk).
+APK soubor hry si můžete stáhnout [zde](./Export/SketchBall.apk).<br>
+Hra je také dostupná na [Google Play](https://play.google.com/store/apps/details?id=org.godotengine.sketchball):<br>
+<img alt="qr code" src="./Screenshots/SketchBallQR.png" width="300">
 
 ## Použité nástroje
 - [Godot](https://godotengine.org) (v3.5 mono)
@@ -123,7 +125,7 @@ public class Player{
 Kompletní implementaci naleznete [zde](./Scripts/Player.cs).
 
 ### Ukládání hry
-Ukládání hry má Godot opět řešen velice jednoduše:
+Ukládání hry má Godot opět řešené velice jednoduše:
 ```cs
 public class SaveManager{
     Player player;
