@@ -25,7 +25,7 @@ Cílem hry je získání co největšího score tím, že se hráč snaží, pom
 ## Ke stažení
 APK soubor hry si můžete stáhnout [zde](./Export/SketchBall.apk).<br>
 Hra je také dostupná na [Google Play](https://play.google.com/store/apps/details?id=org.godotengine.sketchball):<br>
-<img alt="qr code" src="./Screenshots/SketchBallQR.png" width="300">
+<img alt="qr code" src="./Screenshots/SketchBallQRUpdated.png" width="300">
 
 ## Použité nástroje
 - [Godot](https://godotengine.org) (v3.5 mono)
